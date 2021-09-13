@@ -7,13 +7,13 @@ import {
   useRouteMatch,
   useParams,
 } from "react-router-dom";
+import PostPage from "./pages/postPage/PostPage";
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
-          <Dashboard />
-        </Route>
+        <Route exact path="/" component={Dashboard}></Route>
+        <Route exact path="/post" component={PostPage}></Route>
       </Switch>
     </Router>
   );
