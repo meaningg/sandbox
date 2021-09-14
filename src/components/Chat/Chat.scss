@@ -1,0 +1,162 @@
+// mixins популярных брекпоинтов
+@mixin desktop {
+  @media screen and (max-width: 1920px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: 1366px) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+// вызов mixin
+// footer {
+// @include phones{ background-color: red;}
+// }
+
+.container__chat {
+  flex: 1 0 auto;
+  max-width: 100%;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='980' preserveAspectRatio='none' viewBox='0 0 1920 980'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1078%26quot%3b)' fill='none'%3e%3crect width='1920' height='980' x='0' y='0' fill='rgba(18%2c 18%2c 18%2c 1)'%3e%3c/rect%3e%3cpath d='M -75.69588534333161%2c621 C 52.3%2c553.2 308.3%2c278.6 564.3041146566684%2c282 C 820.3%2c285.4 948.3%2c612.6 1204.3041146566684%2c638 C 1460.3%2c663.4 1588.3%2c427.8 1844.3041146566684%2c409 C 2100.3%2c390.2 2469.16%2c577.6 2484.3041146566684%2c544 C 2499.44%2c510.4 2032.86%2c301.6 1920%2c241' stroke='rgba(69%2c 83%2c 61%2c 0.23)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -1209.8693858501906%2c578 C -1081.87%2c543.2 -825.87%2c414 -569.8693858501905%2c404 C -313.87%2c394 -185.87%2c556.2 70.1306141498095%2c528 C 326.13%2c499.8 454.13%2c241.8 710.1306141498095%2c263 C 966.13%2c284.2 1108.16%2c629.2 1350.1306141498094%2c634 C 1592.1%2c638.8 1806.03%2c356.4 1920%2c287' stroke='rgba(69%2c 83%2c 61%2c 0.23)' stroke-width='2'%3e%3c/path%3e%3cpath d='M -1236.8531694736694%2c509 C -1108.85%2c495.2 -852.85%2c406.6 -596.8531694736694%2c440 C -340.85%2c473.4 -212.85%2c715 43.14683052633063%2c676 C 299.15%2c637 427.15%2c266.4 683.1468305263306%2c245 C 939.15%2c223.6 1075.78%2c554 1323.1468305263306%2c569 C 1570.52%2c584 1800.63%2c369.8 1920%2c320' stroke='rgba(69%2c 83%2c 61%2c 0.23)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1078'%3e%3crect width='1920' height='980' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+
+  .chatsList {
+    height: 660px;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    min-width: 200px;
+    width: 21vw;
+    background-color: #181818de;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    overflow: auto;
+    .chatsList__item {
+      border-radius: 7px;
+      width: 100%;
+      background-color: rgb(45, 49, 43);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: 0.2s;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(52, 58, 49);
+        .chatsList__item_deleteIcon {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+      .chatsList__item_deleteIcon {
+        padding: 20px;
+        transition: 0.2s;
+        opacity: 0;
+        pointer-events: none;
+        font-size: 20pt;
+        color: rgba(255, 255, 255, 0.267);
+        &:hover {
+          color: rgb(255, 52, 52);
+        }
+      }
+      &.chatsList__item_choosen {
+        background-color: rgb(69, 83, 61);
+      }
+      span {
+        line-height: 50px;
+        font-size: 16pt;
+        font-weight: 300;
+        padding: 10px;
+        color: white;
+      }
+    }
+    @include phones {
+      visibility: hidden;
+      pointer-events: none;
+    }
+    @include tablets {
+      visibility: hidden;
+      pointer-events: none;
+    }
+    @include laptop {
+      height: 465px;
+    }
+  }
+  .chatRoom {
+    height: 660px;
+    width: 75vw;
+    padding: 10px;
+    background-color: #181818;
+    border-radius: 5px;
+
+    @include phones {
+      visibility: hidden;
+      pointer-events: none;
+    }
+    @include tablets {
+      visibility: hidden;
+      pointer-events: none;
+    }
+    @include laptop {
+      height: 465px;
+    }
+  }
+  .sideBar {
+    height: 660px;
+    width: 4vw;
+    min-width: 55px;
+    background-color: #181818de;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: flex-end;
+    }
+    .sideBar__button {
+      color: rgb(45, 49, 43);
+      padding: 10px;
+      font-size: 25pt;
+
+      .sideBar__button_icon {
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          color: rgb(69, 83, 61);
+        }
+      }
+    }
+    @include phones {
+      visibility: hidden;
+      pointer-events: none;
+    }
+    @include tablets {
+      visibility: hidden;
+      pointer-events: none;
+    }
+    @include laptop {
+      height: 465px;
+    }
+  }
+}

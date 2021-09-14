@@ -39,7 +39,7 @@ function Links({ linksArray }) {
           Show more <FontAwesomeIcon icon={faArrowRight} />
         </div>
         {linksArray.map((doc) => (
-          <Fade delay={getRandomInt(300)}>
+          <Fade key={doc.id.toString()} delay={getRandomInt(300)}>
             <Link to={doc.link}>
               <div className="link noselect">
                 <img className="link__img" src={doc.img} alt="" />

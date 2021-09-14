@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.scss";
-function Header() {
+function Header({ title }) {
   return (
     <header className="noselect">
-      <Link to="/">Dashboard</Link>
+      <Link to="/">{title}</Link>
       <span>mean.ing</span>
     </header>
   );

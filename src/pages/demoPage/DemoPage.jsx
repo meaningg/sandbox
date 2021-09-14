@@ -6,7 +6,7 @@ import "./DemoPage.scss";
 function DemoPage() {
   return (
     <div className="container__demoPage">
-      <Header />
+      <Header title="DemoPage" />
       <Demo />
       <Footer />
     </div>

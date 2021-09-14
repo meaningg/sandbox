@@ -153,11 +153,10 @@
       form {
         border-radius: 7px;
         height: auto;
-        background-color: white;
+        background-color: #181818de;
         padding: 15px;
         display: flex;
         gap: 10px;
-
         -webkit-box-shadow: 5px 5px 49px 19px rgba(0, 0, 0, 0.12);
         box-shadow: 5px 5px 49px 19px rgba(0, 0, 0, 0.12);
         &.disabled {
@@ -167,15 +166,17 @@
           width: 100%;
           height: 30px;
           border-radius: 7px;
-          border: solid 2px rgba(0, 0, 0, 0.315);
+          border: solid 2px rgba(129, 129, 129, 0.534);
           padding: 5px;
           outline: none;
-
+          font-size: 12pt;
+          background-color: #262626;
+          color: white;
           &:hover {
-            border: solid 2px rgba(0, 0, 0, 0.658);
+            border: solid 2px rgba(255, 255, 255, 0.534);
           }
           &:focus {
-            border: solid 2px rgba(0, 0, 0, 0.658);
+            border: solid 2px rgba(255, 255, 255, 0.534);
             border-radius: 7px;
             -webkit-box-shadow: 5px 5px 19px 5px rgba(0, 0, 0, 0.26);
             box-shadow: 5px 5px 19px 5px rgba(0, 0, 0, 0.26);

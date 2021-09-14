@@ -5,7 +5,7 @@ import Footer from "../../components/footer/Footer";
 function PostPage() {
   return (
     <div>
-      <Header />
+      <Header title="PostDemo" />
       <Comments />
       <Footer />
     </div>

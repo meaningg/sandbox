@@ -119,7 +119,7 @@ function Likes() {
       setLikesList(likesData);
       console.log(likesList);
     });
-  }, []);
+  });
   // getting like state
   useEffect(() => {
     const db = firebaseConfig.firestore();
@@ -129,7 +129,7 @@ function Likes() {
       .onSnapshot((snapshot) => {
         setIsLiked(snapshot.empty);
       });
-  }, []);
+  });
 
   // handle like state
   const handleLike = () => {
@@ -192,7 +192,7 @@ function LikesUserInfo({ uid }) {
         snapshot.forEach((doc) => usrData.push({ ...doc.data(), id: doc.id }));
         setUserData(usrData);
       });
-  }, []);
+  });
 
   return (
     <div>
@@ -248,7 +248,7 @@ function UserInfo({ date, uid }) {
         snapshot.forEach((doc) => usrData.push({ ...doc.data(), id: doc.id }));
         setUserData(usrData);
       });
-  }, []);
+  });
 
   function convertDate(inputFormat) {
     function pad(s) {

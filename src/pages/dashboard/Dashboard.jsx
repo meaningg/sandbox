@@ -7,54 +7,63 @@ import About from "../../components/about/About";
 function Dashboard() {
   const linksArray = [
     {
+      id: 1,
       name: "Post",
       description: "Post component example with likes and comments",
       link: "/post",
       img: "https://sun9-58.userapi.com/impg/JtHaSc1ywBCSCNtM58miMj3MMVYcUuO-G9DU2Q/IxO8b90i8q8.jpg?size=769x960&quality=96&sign=57eed7596e63043f6171166f776d7513&type=album",
     },
     {
+      id: 2,
       name: "ChatApp",
       description: "Chat app example",
-      link: "/demo",
+      link: "/chatapp",
       img: "https://sun9-73.userapi.com/impg/fqi_nlpZKdSBwYi1YhNTuj_V_n_WRrqBiiLIPQ/6uVvFP4JlSQ.jpg?size=747x934&quality=96&sign=a8e4f725315f448d1c501b7e298ac50b&type=album",
     },
     {
+      id: 3,
       name: "Audio",
       description: "Audio player sandbox",
       link: "/demo",
       img: "https://sun9-27.userapi.com/impg/8PaBc4ZfY1FD19uGLlMxngwpyGJoOHxbwn0wIA/AinlDg6J7LM.jpg?size=772x960&quality=96&sign=ff3c93736ca143379313d472f1f87678&type=album",
     },
     {
+      id: 4,
       name: "test",
       description: "test test test",
       link: "/demo",
       img: "https://sun9-5.userapi.com/impg/UkIWxBrAR3bGtPcDzmHIYXwduKzyIjACyVG3jQ/-llK08sdVS0.jpg?size=768x960&quality=96&sign=7751926526f41b04863ac1c3f75bea83&type=album",
     },
     {
+      id: 5,
       name: "demo",
       description: "test test test",
       link: "/demo",
       img: "https://sun9-82.userapi.com/impg/39twHm-FO0IMPMwxNHfBamMPm9IIf23scpbV3A/uMWLrJfRF80.jpg?size=795x960&quality=96&sign=87758186c3e0b7ecc09b0c960425140c&type=album",
     },
     {
+      id: 6,
       name: "test",
       description: "test test test",
       link: "/demo",
       img: "https://sun9-13.userapi.com/impg/82eyyvXEyWjTCn4AGkkJBeqjuRW0j277SEegUw/g6auBttyTIs.jpg?size=770x960&quality=96&sign=02371721ce4e64cb2e872208f0eed620&type=album",
     },
     {
+      id: 7,
       name: "test",
       description: "test test test",
       link: "/demo",
       img: "https://sun9-87.userapi.com/impg/jplKThbJ7j8iFPCzERyEHiqOt5_POzSLsENb8w/cKf9HRevzQo.jpg?size=771x960&quality=96&sign=d0e8bb4e10914c4f636725c9bf52b43a&type=album",
     },
     {
+      id: 8,
       name: "test",
       description: "test test test",
       link: "/demo",
       img: "https://sun9-55.userapi.com/impg/279pbzXR92Lp0tN98dHP5PKmykD6TOMLn9-iuQ/pDeu1tU_khU.jpg?size=771x960&quality=96&sign=b2cc5c794203b0ec4ef6c699b3575c84&type=album",
     },
     {
+      id: 9,
       name: "test",
       description: "test test test",
       link: "/demo",
@@ -63,8 +72,8 @@ function Dashboard() {
   ];
 
   return (
-    <div className="container">
-      <Header />
+    <div className="container__dashboard">
+      <Header title="Dashboard" />
       <Links linksArray={linksArray} />
       <About />
       <Footer />
