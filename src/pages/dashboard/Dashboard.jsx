@@ -31,7 +31,7 @@ function Dashboard() {
       img: "https://sun9-5.userapi.com/impg/UkIWxBrAR3bGtPcDzmHIYXwduKzyIjACyVG3jQ/-llK08sdVS0.jpg?size=768x960&quality=96&sign=7751926526f41b04863ac1c3f75bea83&type=album",
     },
     {
-      name: "test",
+      name: "demo",
       description: "test test test",
       link: "/demo",
       img: "https://sun9-82.userapi.com/impg/39twHm-FO0IMPMwxNHfBamMPm9IIf23scpbV3A/uMWLrJfRF80.jpg?size=795x960&quality=96&sign=87758186c3e0b7ecc09b0c960425140c&type=album",
