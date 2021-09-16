@@ -35,6 +35,9 @@
 
   .chatsList {
     height: 660px;
+    // 3dp shadow
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
     scrollbar-width: none;
     &::-webkit-scrollbar {
       width: 0;
@@ -52,6 +55,7 @@
     overflow: auto;
     .chatsList__item {
       border-radius: 7px;
+
       width: 100%;
       background-color: rgb(45, 49, 43);
       display: flex;
@@ -59,17 +63,24 @@
       justify-content: space-between;
       transition: 0.2s;
       cursor: pointer;
+      position: relative;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
       &:hover {
         background-color: rgb(52, 58, 49);
+        box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+          0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
+        transform: translateY(-1px);
         .chatsList__item_deleteIcon {
           opacity: 1;
           pointer-events: all;
         }
       }
       .chatsList__item_deleteIcon {
-        padding: 20px;
         transition: 0.2s;
         opacity: 0;
+        right: 20px;
+        position: relative;
         pointer-events: none;
         font-size: 20pt;
         color: rgba(255, 255, 255, 0.267);
@@ -102,6 +113,9 @@
   }
   .chatRoom {
     height: 660px;
+    // 3dp shadow
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
     width: 75vw;
     padding: 10px;
     background-color: #181818;
@@ -122,6 +136,9 @@
   .sideBar {
     height: 660px;
     width: 4vw;
+    // 3dp shadow
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
+      0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2);
     min-width: 55px;
     background-color: #181818de;
     border-radius: 5px;
@@ -138,13 +155,31 @@
       color: rgb(45, 49, 43);
       padding: 10px;
       font-size: 25pt;
+      position: relative;
+      cursor: pointer;
+      transition: 0.2s;
 
-      .sideBar__button_icon {
-        cursor: pointer;
-        transition: 0.2s;
-        &:hover {
-          color: rgb(69, 83, 61);
+      &:hover {
+        color: rgb(255, 255, 255);
+        span {
+          opacity: 1;
         }
+      }
+      span {
+        transition: 0.2s;
+        color: white;
+        position: absolute;
+        font-size: 12pt;
+        right: 50px;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+          0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        pointer-events: none;
+        background-color: #262626;
+        top: 18px;
+        border-radius: 7px;
+        padding: 5px 10px;
+        white-space: nowrap;
       }
     }
     @include phones {

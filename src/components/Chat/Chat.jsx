@@ -55,23 +55,21 @@ function Chat() {
       <Fade duration={300} delay={getRandomInt(700)}>
         <div className="sideBar">
           <div className="sideBar__button">
-            <FontAwesomeIcon className="sideBar__button_icon" icon={faPlus} />
+            <span>Create a chat room</span>
+            <FontAwesomeIcon icon={faPlus} />
           </div>
           <div className="sideBar__button">
-            <FontAwesomeIcon
-              className="sideBar__button_icon"
-              icon={faSignInAlt}
-            />
+            <span>Enter the chat room</span>
+            <FontAwesomeIcon icon={faSignInAlt} />
           </div>
           <div className="sideBar__button">
-            <FontAwesomeIcon className="sideBar__button_icon" icon={faCog} />
+            <span>Settings</span>
+            <FontAwesomeIcon icon={faCog} />
           </div>
           <Link to="/">
             <div className="sideBar__button">
-              <FontAwesomeIcon
-                className="sideBar__button_icon"
-                icon={faPowerOff}
-              />
+              <span>Exit</span>
+              <FontAwesomeIcon icon={faPowerOff} />
             </div>
           </Link>
         </div>

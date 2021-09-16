@@ -46,6 +46,10 @@ function Links({ linksArray }) {
 
                 <div className="link__title">{doc.name}</div>
                 <div className="link__text">{doc.description}</div>
+                <div className="link__state">
+                  <div className="link__state_left"></div>
+                  <div className="link__state_right">{doc.state}</div>
+                </div>
               </div>
             </Link>
           </Fade>
